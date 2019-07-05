@@ -76,7 +76,7 @@
             <div class="d-flex justify-content-center">
                 <ul class="fa-ul">
                     <li><i class="fa-li fa fa-github"></i>
-                        <a href="https://mcsscm.utm.utoronto.ca/alomrani/device-fingerprinting-augmenting-authentication">Gitlab Repo</a>
+                        <a href="https://mcsscm.utm.utoronto.ca/alomrani/device-fingerprinting-augmenting-authentication">Gitlab Repo (Currently Private)</a>
                     </li>
                 </ul>
             </div>
@@ -86,12 +86,34 @@
             <div class="row my-2">
                 <div class="col">
                     <h4>What is it?</h4>
-                    <p>pp</p>
+                    <ul>
+                        <li>A device fingerprinting authenticator API, built for a project course with fellow classmates with the intent of testing device fingerprinting as a
+                            form of second factor authenticator where it is hassle free, and almost unnoticeable by the user</li>
+                        <li>This was built using SQLite, React Native, Yarn, express.js, Javascript, HTML, CSS, and Nodemailer where we use React Native to create a homepage
+                        where you could register or log in, and then we have Yarn to create our server where the API works, using REST endpoints through express.js to do certain things such as
+                        logging in, registering, and certain database queries through SQLite for example determining devices tied to an account, and also have scripts to send mail to emails
+                        for confirmation and also to confirm identity through unique codes</li>
+                        <li>When registering it would send you an email to confirm your registration and also run the fingerprinting script to register a computer with its
+                        fingerprints so then you could check the fingerprints when you log in.</li>
+                        <li>When logging in it would run the fingerprinting script and confirm that your fingerprints are similar with a threshold of 90% and if under the threshold
+                        would log the new fingerprints that didn't match and email you to confirm that this attempt was you so then it can register a new computer with new fingerprints
+                        to your account so that you can use it to log in without removing the other computer and its fingerprints</li>
+                        <li>After logging in, you have the ability to remove devices tied to your account and also see which accounts are tied to you through database queries using SQLite and express.js
+                            along with fingerprints we collect, so we can see the fingerprints that can be passed through</li>
+                    </ul>
                 </div>
 
                 <div class="col">
                     <h4>What did I do?</h4>
-                    <p>pp</p>
+                    <ul>
+                        <li>I worked on the backend portion of the project so I worked with the database and the endpoints with a little bit on the React Native end for sending data
+                        through the client to the server</li>
+                        <li>For the database and endpoints I worked on the queries and relationships, such as creating a relationship for users, devices, fingerprints, and tokens then having queries
+                        so given a user I could get a list of devices or create a expirable token for users so they can confirm their identity through their email</li>
+                        <li>Along with that I worked on the script for sending and email and creating a token for when you attempt to log in from another device, which was using nodemailer
+                        and crypto, nodemailer was used to send the email through a gmail account that we owned, and using crypto to generate a unique token which then gets registered
+                        in our database to a user with a expire time and if they can put their token in before it expires it will do device registering and all</li>
+                    </ul>
                 </div>
             </div>
 
