@@ -1,10 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="fa-events-icons-ready">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/business-casual.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/04dc49c3ab.css" media="all" rel="stylesheet">
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Joshua Mazariegos</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+        .brand {
+            font-size: 20pt;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
 </head>
 <body>
+<div class="brand bg-dark text-center"><b class="font-weight-light text-white-50">Joshua Mazariegos</b></div>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link font-weight-light" href="index.html">Home</a></li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle font-weight-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projects
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="minesweeper.html">Minesweeper AI</a>
+                    <a class="dropdown-item" href="studenthelper.html">Student Helper Web App</a>
+                    <a class="dropdown-item active" href="#">Device Fingerprinting Authentication API</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link font-weight-light" href="resume.pdf">Resume</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="pos-f-t d-none d-block d-sm-none">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link font-weight-light text-white-50" href="index.html">Home</a></li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle font-weight-light text-white-50" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projects
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item active" href="#">Minesweeper AI</a>
+                        <a class="dropdown-item" href="studenthelper.html">Student Helper Web App</a>
+                        <a class="dropdown-item" href="devicefingerprinting.html">Device Fingerprinting Authentication API</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link font-weight-light text-white-50" href="resume.pdf">Resume</a></li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</div>
+
+<div class="d-flex justify-content-center mx-4 my-4">
+    <div class="jumbotron col-md-6">
+        <p class="lead text-center">Minesweeper AI</p>
+
+        <div class="d-flex justify-content-center">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-github"></i>
+                    <a href="https://github.com/jmazariegos/minesweeper-ai">Github Repo</a>
+                    <a href="https://jmazariegos.github.io/minesweeper-ai/">Website</a>
+                </li>
+            </ul>
+        </div>
+
+        <hr class="my-2">
+
+        <div class="row my-2">
+            <div class="col">
+                <h4 class="text-center">What is it?</h4>
+                <ul>
+                    <li>A minesweeper game with an AI attached to it!</li>
+                    <li>The AI is meant to solve for every possible 3x3 square probability then see if it can use that knowledge to win games</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h4 class="text-center">What did I do?</h4>
+                <ul>
+                    <li>I created the entire minesweeper game from scratch in javascript along with the AI, the visuals were all created by me as well</li>
+                    <li>The game was done using clickable images where the board is created by the createBoard function which places the amount of tiles specified and then randomly places
+                    the amount of bombs for the game but avoiding where it was clicked to avoid losing immediately and the buttons when clicked to a recursive function to check whether the
+                    next tiles around are empty and if they are continue checking around them until they hit a tile with a bomb near it which then marks that tile with the number of
+                    bombs near it</li>
+                    <li>The timer is done using a timer interval same with the placing the flag down with left click but can also be done instantly with right click, technically you can
+                    make a board of any size but for limiting (and other reasons) I have limited it to the normal amount, the reset button is the face and will always create the board with
+                    the settings that are there</li>
+                    <li>The AI on the other hand was made with a reinforcement learning method in mind so its a 3 layer AI with the input layer as the full board, the hidden layer as the
+                    3x3 squares that are on the board, and the output layer as the single tile from the 3x3 square, and the hidden layer is made up of only one version of each 3x3 square
+                    so that each board influences the probability of a 3x3 square by making it easier to determine its value, routing to output, and smaller size for AI</li>
+                    <li>When the AI starts it adds the current board into the network then adds all new 3x3 squares within the board and attaches any existing 3x3 squares in the network to
+                    the board with the corresponding positions of each tile in the 3x3 square to the full board (real position on board) and the connection from the 3x3 square to the tile containing the position of
+                    the tile in 3x3 square (relative position)</li>
+                    <li>The probabilities start at an equal level for each tile that isn't revealed yet so a new 3x3 square with 3 unrevealed tiles will have each tile with a probability of 1/3 of being a bomb
+                    and depending on what the percentage reward is, it will increase tiles that have not been a bomb (while decreasing the others), or decrease them (and vice versa) which happens through
+                    a backward pass if the tile is a bomb or not and the forward pass finds the tile with the highest probability</li>
+                    <li>Lastly the AI has settings for making it do runs on its own so it can get trained and the delay if you want to watch it, which is still in development for the time being</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
 </body>
 </html>
