@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2735d53d-0d01-41ad-aa27-a694c1ff2a32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper.html" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -52,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/minesweeper.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="385">
-              <caret line="80" column="46" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="46" />
+              <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -176,7 +175,7 @@
       <workItem from="1562294780611" duration="2356000" />
       <workItem from="1600232570968" duration="13000" />
       <workItem from="1601102460828" duration="5451000" />
-      <workItem from="1601108488860" duration="83000" />
+      <workItem from="1601108488860" duration="168000" />
     </task>
     <task id="LOCAL-00001" summary="yeah">
       <created>1555544107121</created>
@@ -210,7 +209,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53240000" />
+    <option name="totallyTimeSpent" value="53325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -278,7 +277,7 @@
     <entry file="file://$PROJECT_DIR$/minesweeper.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
-          <caret line="80" column="46" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="46" />
+          <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
         </state>
       </provider>
     </entry>
