@@ -91,7 +91,7 @@
                 <h4 class="text-center">What is it?</h4>
                 <ul>
                     <li>A minesweeper game with an AI attached to it!</li>
-                    <li>The AI is meant to solve for every possible 3x3 square probability then see if it can use that knowledge to win games</li>
+                    <li>The AI is meant to learn from losses in 3x3 squares and use that knowledge to try to win, only leverage it has is basic logic i.e. 3x3 with 1 square and only 1s meaning that has to be a bomb</li>
                 </ul>
             </div>
 
@@ -116,6 +116,8 @@
                     and depending on what the percentage reward is, it will increase tiles that have not been a bomb (while decreasing the others), or decrease them (and vice versa) which happens through
                     a backward pass if the tile is a bomb or not and the forward pass finds the tile with the highest probability</li>
                     <li>Lastly the AI has settings for making it do runs on its own so it can get trained and the delay if you want to watch it, which is still in development for the time being</li>
+                    <li>Bonus! I noticed that the AI was really bad at learning with no prior knowledge so I attempted to give it a little leverage by giving it some basic logic of where bombs MUST be
+                    so spots where it has to be, it will already know by using a function and using the faces of the tiles already seen</li>
                 </ul>
             </div>
         </div>
