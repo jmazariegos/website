@@ -1,0 +1,9 @@
+#josh img {
+    border-radius: 50%;
+}
+
+#links li, #buttons li {
+    display: inline;
+    padding-left: 0;
+    padding-right: 25px;
+}
