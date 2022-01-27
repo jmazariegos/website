@@ -1,9 +1,162 @@
+@font-face {
+    font-family: Roboto;
+    src: url("font/Roboto-Light.ttf");
+}
+
+body, div, a, p, h1, h2, h3, h4 {
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+/*JOSH / HEADER*/
+
+#josh, body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#josh p {
+    margin: 0 20% 0 20%;
+    opacity: 0%;
+}
+
+#josh h1 {
+    margin: 2px auto;
+}
+
 #josh img {
     border-radius: 50%;
+    width: 25%;
+    height: 25%;
+    margin: 2px auto;
+}
+
+#links, #buttons {
+    display: flex;
+    margin: 5px auto;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
 }
 
 #links li, #buttons li {
     display: inline;
-    padding-left: 0;
-    padding-right: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
+
+#buttons li {
+    cursor: default;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+#buttons li:hover {
+    color: gray;
+}
+
+/*RESUME / PROJECTS / RECIPES*/
+
+#resume, #resume h3, #work, #project-summary, #projects, #recipes, #home {
+    margin: 10px 0 0 0;
+}
+
+#resume, #projects, #recipes, .recipe, .project {
+    display: none;
+}
+
+#resume h2, h4, #projects h3, #recipes h2 {
+    margin: 0;
+}
+
+.fa-ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.columns {
+    display: flex;
+    margin: 0 10% 0 10%;
+}
+
+.col {
+    width: 50%;
+}
+
+.col li, .col ul{
+    text-align: left;
+    margin-top: 10px;
+}
+
+/*GENERAL*/
+
+select {
+    border: none;
+    background: none;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 15px;
+}
+
+/*MOBILE*/
+
+@media only screen and (max-width: 600px) {
+    #links {
+        display: none;
+    }
+
+    #joshmage {
+        display: none;
+    }
+
+    #desc {
+        margin: 0 5% 0 5% !important;
+    }
+}
+
+/*ANIMATIONS*/
+
+.img_visible {
+    animation: img_v 1s normal forwards;
+}
+
+.img_invisible{
+    animation: img_inv 1s normal forwards;
+}
+
+.visible {
+    animation: fade_in 0.5s normal forwards;
+}
+
+.invisible {
+    animation: fade_out 0.5s normal forwards;
+}
+
+@keyframes img_v {
+    from {opacity: 0%;
+        width: 0%}
+    to {opacity: 100%;
+        width: 25%}
+}
+
+@keyframes img_inv {
+    from {opacity: 100%;
+        width: 25%}
+    to {opacity: 0%;
+        width: 0%}
+}
+
+@keyframes fade_out {
+    from {opacity: 100%}
+    to {opacity: 0%}
+}
+
+@keyframes fade_in {
+    from {opacity: 0%}
+    to {opacity: 100%}
+}
+
