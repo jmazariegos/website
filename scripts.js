@@ -1,13 +1,3 @@
-//refreshing or opening on different page than home page
-let link = window.location.href;
-if(link.endsWith("#projects")){
-    change_page("body", "projects");
-}else if(link.endsWith("#resume")){
-    change_page("body", "resume");
-}else if(link.endsWith("#recipes")){
-    change_page("body", "recipes");
-}
-
 function change_page(which, page) {
     //get rid of the recipe / project thats there for aesthetic reasons
     if (which == 'body') {
@@ -68,4 +58,14 @@ function clear_page(which){
         $cur_page.removeClass("visible").addClass("invisible");
         $("select").val("none");
     }, 500);
+}
+
+//refreshing or opening on different page than home page / page load
+let link = window.location.href;
+if(link.endsWith("#projects")){
+    change_page("body", "projects");
+}else if(link.endsWith("#resume")){
+    change_page("body", "resume");
+}else if(link.endsWith("#recipes")){
+    change_page("body", "recipes");
 }
