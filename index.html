@@ -14,10 +14,10 @@
 </head>
 <body>
 <div id="josh">
-    <img id="joshmage" src="resources/test.png">
+    <img id="joshmage" src="resources/josh.jpg">
     <div id="moves">
         <h1>JOSHUA MAZARIEGOS</h1>
-        <ul id="links" class="fa-ul">
+        <ul id="contact" class="fa-ul links">
                 <li>
                     <i class="fa fa-envelope"></i>
                     <a href=mailto:joshamaza@gmail.com>joshamaza@gmail.com</a>
@@ -41,9 +41,9 @@
             <li onclick="change_page('body', 'resume')" tabindex="0">
                 RESUME
             </li>
-            <li onclick="change_page('body', 'recipes')" tabindex="0">
+<!--            <li onclick="change_page('body', 'recipes')" tabindex="0">
                 RECIPES
-            </li>
+            </li>-->
         </ul>
     </div>
     <p id="home" class="visible">Hey! I'm Josh, a UofT 2020 Graduate, I graduated with an Honours Bachelors of Science in Information Security
@@ -61,16 +61,17 @@
         <option value="device-fingerprinter">Device Fingerprinting API</option>
         <option value="minesweeper-ai">Minesweeper AI</option>
         <option value="self-driving-car">Self Driving Car</option>
-        <option value="goodboy-app">Goodboy App</option>
+        <option value="goodboy-app" hidden>Goodboy App</option>
         <option value="website">This website!</option>
     </select>
 
     <div id="web-helper-app" class="project invisible">
         <h3>UoFT STUDENT HELPER WEB APP</h3>
         <h4>JAVA, SPRING BOOT, MONGODB, HTML, JAVASCRIPT, CSS, SQL</h4>
-        <ul class="fa-ul">
-            <li><i class="fa-li fa fa-github"></i>
-                <a href="https://github.com/UTMCSC301/csc301project-slack-overflow">Github Repo (Currently Private)</a>
+        <ul class="fa-ul links">
+            <li>
+                <i class="fa fa-github"></i>
+                <a href="https://github.com/jmazariegos/UTM-Student-Helper">Github Repo (Currently Private)</a>
             </li>
         </ul>
 
@@ -118,8 +119,9 @@
     <div id="device-fingerprinter" class="project invisible">
         <h3>DEVICE FINGERPRINTING API</h3>
         <h4>REACT, SQLite, JAVASCRIPT, EXPRESS.JS, NODE.JS</h4>
-        <ul class="fa-ul">
-            <li><i class="fa-li fa fa-github"></i>
+        <ul class="fa-ul links">
+            <li>
+                <i class="fa fa-github"></i>
                 <a href="https://mcsscm.utm.utoronto.ca/alomrani/device-fingerprinting-augmenting-authentication">Gitlab Repo (Currently Private)</a>
             </li>
         </ul>
@@ -162,11 +164,12 @@
     <div id="minesweeper-ai" class="project invisible">
         <h3>MINESWEEPER AI</h3>
         <h4>HTML, JAVASCRIPT, CSS</h4>
-        <ul class="fa-ul">
-            <li><i class="fa-li fa fa-github"></i>
+        <ul class="fa-ul links">
+            <li>
+                <i class="fa fa-github"></i>
                 <a href="https://github.com/jmazariegos/minesweeper-ai">Github Repo</a>
             </li>
-            <li><i class="fa-li fa fa-desktop"></i>
+            <li><i class="fa fa-desktop"></i>
                 <a href="https://jmazariegos.github.io/minesweeper-ai/">Website</a>
             </li>
         </ul>
@@ -211,16 +214,114 @@
     <div id="self-driving-car" class="project invisible">
         <h3>SELF DRIVING CAR</h3>
         <h4>PYTHON, ROSPY, FLASK, NVIDIA LEARNING NETWORK, DASH</h4>
+        <ul class="fa-ul links">
+            <li>
+                <i class="fa fa-github"></i>
+                <a href="https://github.com/Autonomous-Robotics-UTM">Github Repo</a>
+            </li>
+            <li>
+                <i class="fa fa-book"></i>
+                <a href="https://github.com/Autonomous-Robotics-UTM/Imitation-Learning-Net/raw/master/Autonomous%20Driving%20Through%20Imitation%20Learning.pdf">Research Paper</a>
+            </li>
+        </ul>
+
+        <div class="columns">
+            <div class="col">
+                <h4>What is it?</h4>
+                <ul>
+                    <li>This is a research project I did with a professor and my classmates in my final year, the goal
+                    of the project was to create a self-driving car then create scenarios where the car would not be able
+                    to properly make a decision in order to show potential flaws within self-driving technology that can
+                    then be used to help avoid those scenarios.</li>
+                    <li>We were able to create the self-driving car using a remote car equipped with a liDAR, RGBD camera,
+                    and a small computer running Ubuntu, it first begun using a PID Control to create the dataset which
+                    would be used to train the neural network while it worked for our room, in our campus, the building we were using had glass
+                    fence and windows in the hallways causing the liDAR to be unable to guess how far the wall actually was, making the dataset
+                    more unreliable, so we switched to using a controller and driving it in the way we would want it to
+                    drive.</li>
+                    <li>Afterwards we would trained the NVIDIA network based on our dataset to have the car create the
+                    decisions, so we had to re-weigh some values such as turning since compared to the going straight
+                    data we had, we needed it to properly weigh the turning data so turning is prioritized during turns
+                    rather than going straight.</li>
+                    <li>In order to see it moving live and decision making as it was driving, we had implemented a DASH/Flask
+                    website hosted on the computer on the remote car which would store and create live graphs of the angle and
+                    time data so when it would make a strange decision we could see when and why it happened, helping
+                    us work on it faster along with a remote command terminal to control the car's server and network.</li>
+                    <li>As a sad final note, the pandemic had started during the final months of our research project so
+                    we weren't able to work on the create scenarios where our car would fail because of the school being
+                    moved to remote learning and no students allowed on the campus unless you live there, making it
+                    much harder to work on it.</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h4>What did I do?</h4>
+                <ul>
+                    <li>I helped with working on the neural network, creating the DASH/Flask server, and a few
+                    experimental testing choices.</li>
+                    <li>Regarding the neural network what I worked on was helping the decision making and weighing of the
+                    network because when we realized that the data heavily prioritized going straight because for a majority
+                    of the data the car is going straight so turning left and right was weighted less, so I helped in determining
+                    how to adjust our weight function so that we would correctly weigh the data in order for our remote car
+                    to properly drive through our campus building's hallways.</li>
+                    <li>In regards with the DASH/Flask server, I created the server using Flask and REST then using DASH to create
+                    the graphs which would be updated live and recorded so that we could review the data as it happens or if we
+                    need it later.</li>
+                    <li>I used REST in order for the website to receive live data, so it would send the time of decision and angle
+                    of the car which would then be input into the current CSV file for the run then have DASH update based
+                    on the CSV we just updated using a DASH callback function, while also including tools such as pausing the graph
+                    update in case we need to look at a specific time while it stays updating or resetting the graph for new data / run.</li>
+                    <li>Final use for the FLASK server was a remote terminal just using REST, SYSTEM, and a terminal sandbox iframe made by
+                    <a href="https://github.com/ethanhuang0526">ethanhuang0526</a> which would take your command from the terminal
+                    then send it to the server on the remote car to then execute commands such as starting the network or working
+                    on it as it is driving, as before that we could only work on it when we hooked the car up to the monitor in
+                    our room.</li>
+                    <li>Continuing with the decision making and experimental testing, I helped to implement PyTorch's floor segmentation
+                    to then feed the car only data of the floor so then the car would only need the floor to know what decision
+                    to make, and we were able to segment the floor from test data images but unfortunately we weren't able to put
+                    the data to the test as pandemic had started making using the remote car more difficult.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <div id="goodboy-app" class="project invisible">
-        <h3>GOODBOY APP</h3>
+<!--    <div id="gb-app" class="project invisible">
+        <h3>GB APP</h3>
         <h4>SWIFT</h4>
-    </div>
+    </div>-->
 
     <div id="website" class="project invisible">
         <h3>THIS WEBSITE!</h3>
         <h4>HTML, CSS, JAVASCRIPT, JQUERY</h4>
+        <ul class="fa-ul links">
+            <li>
+                <i class="fa fa-github"></i>
+                <a href="https://github.com/jmazariegos/website">Github Repo</a>
+            </li>
+        </ul>
+
+        <div class="columns">
+            <div class="col">
+                <h4>What is it?</h4>
+                <ul>
+                    <li>My website, you may ask why since you can just make one easily anywhere and to that I say I like learning
+                     and trying out new knowledge, something nice about seeing something you make come together!</li>
+                    <li>Maybe more coming eventually!</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h4>What did I do?</h4>
+                <ul>
+                    <li>Javascript + JQuery to change pages using a function based on where the page is located and which page will be changed to
+                     using JQuery for easier element changes such as disabling all clickable buttons / dropdowns and using them to change animation
+                     classes for page changes</li>
+                    <li>CSS is used to do the animations and are tied to classes so that when the page changes the relevant elements start doing
+                     animation by having animations for fading out and fading in mixed with the timeout function to make sure the animations
+                     look smooth and everything is gone before replacing</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -231,23 +332,60 @@
             <h2>WORK EXPERIENCE</h2>
             <h3>TATA CONSULTANCY SERVICES - QA ANALYST</h3>
             <h4>APRIL 2021 - PRESENT</h4>
+            <ul class="resume-points">
+                <li>Coordinated with a team, and was a task coordinator for my team including leading, assigning tests, and creating test cases.</li>
+                <li>Worked to help team members if they needed help with software, test cases, and documentation.</li>
+                <li>Trained and helped new team members who joined the team through on call and hands on, making sure they were comfortable with the work.</li>
+                <li>Tested and created tests for software products and bugs within a timeline and coordinated with team members to complete tests.</li>
+                <li>Created test documents and emails based on analysis from existing test documents and test cases.</li>
+            </ul>
         </div>
         <div id="project-summary">
             <h2>PROJECTS</h2>
             <h3>UoFT STUDENT HELPER WEB APP</h3>
             <h4>JAVA, SPRING BOOT, MONGODB, HTML, JAVASCRIPT, CSS, SQL</h4>
-
-            <h3>DEVICE FINGERPRINTING API</h3>
-            <h4>REACT, SQLite, JAVASCRIPT, EXPRESS.JS, NODE.JS</h4>
+            <ul class="resume-points">
+                <li>Created a webpage with classmates for the timetable and course search using HTML, CSS, and Javascript.</li>
+                <li>Displaying courses chosen in the timeline on the big calendar.</li>
+                <li>Created RESTful API endpoints for getting and posting data from our database in JSON format, then having
+                the data interpreted used for enrolling, searching, generating, and maintaining the timetable.</li>
+                <li>Uses scraped data for the endpoints which are implemented using mongoDB and Spring Boot.</li>
+                <li>Set up the scraped data in a nice JSON format to be read in Java Spring Boot and storing individual user's timetables</li>
+            </ul>
 
             <h3>MINESWEEPER AI</h3>
             <h4>HTML, JAVASCRIPT, CSS</h4>
+            <ul class="resume-points">
+                <li>Created a Minesweeper game to use to train a network I created to see if it can learn every unambiguous possibility.</li>
+                <li>Minesweeper game built using just Javascript which is capable of being any size with any amount of bombs, and being able to flag or reset.</li>
+                <li>The game also uses timers and onupdates to keep track of bombs, flags, and time taken for the current run.</li>
+                <li>The network is 1-level neural network which learns through reinforced learning to learn which spots most commonly are bombs or not.</li>
+                <li>Uses just the knowledge of the numbers in the square to create decisions, and can be set to play a set amount of games.</li>
+            </ul>
 
             <h3>SELF DRIVING CAR</h3>
             <h4>PYTHON, ROSPY, FLASK, NVIDIA LEARNING NETWORK, DASH</h4>
+            <ul class="resume-points">
+                <li>Worked with classmates to make a remote car be able to drive through our school hallways on their own.</li>
+                <li>Created a PID Controller using liDAR on the car so it would be able to follow walls at a certain distance.</li>
+                <li>Collected photos and respective speed / angle using a camera while we controlled it to make the training
+                data and test data which would then be trained in pytorch using a Nvidia Network.</li>
+                <li>Used a Flask/DASH server to record the car’s angles as it drives to see live how it’s driving for any outlier outputs.</li>
+                <li>Created a command terminal on the Flask server, so we would be able to work and use commands on the car as it was driving.</li>
+            </ul>
 
-            <h3>GOODBOY APP</h3>
-            <h4>SWIFT</h4>
+            <h3>DEVICE FINGERPRINTING API</h3>
+            <h4>REACT, SQLite, JAVASCRIPT, EXPRESS.JS, NODE.JS</h4>
+            <ul class="resume-points">
+                <li>Working on interpreting all the fingerprint data that gets sent to the database and storing it away linked to a user.</li>
+                <li>Worked on a email two factor authentication which when you can’t be authenticated using your
+                    fingerprint, authenticates using an email and updates your fingerprint.</li>
+                <li>Worked on an authenticator to use fingerprints to authorize access using API endpoints which can be
+                    used on any website through our server along with device lookup and deleting.</li>
+            </ul>
+
+<!--            <h3>GB APP</h3>
+            <h4>SWIFT</h4>-->
         </div>
     </div>
 </div>

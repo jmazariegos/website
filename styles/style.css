@@ -34,7 +34,7 @@ body, div, a, p, h1, h2, h3, h4 {
     margin: 2px auto;
 }
 
-#links, #buttons {
+.links, #buttons {
     display: flex;
     margin: 5px auto;
     width: 100%;
@@ -42,7 +42,7 @@ body, div, a, p, h1, h2, h3, h4 {
     padding: 0;
 }
 
-#links li, #buttons li {
+.links li, #buttons li {
     display: inline;
     padding-left: 15px;
     padding-right: 15px;
@@ -72,12 +72,6 @@ body, div, a, p, h1, h2, h3, h4 {
     margin: 0;
 }
 
-.fa-ul {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
 .columns {
     display: flex;
     margin: 0 10% 0 10%;
@@ -90,6 +84,16 @@ body, div, a, p, h1, h2, h3, h4 {
 .col li, .col ul{
     text-align: left;
     margin-top: 10px;
+}
+
+.resume-points {
+    padding-left: 25%;
+    padding-right: 25%;
+    list-style-type: none;
+}
+
+.resume-points li {
+    margin-top: 8px;
 }
 
 /*GENERAL*/
