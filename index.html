@@ -463,18 +463,14 @@
         }
     });
 
+    //on page load if it's the wrong page change!
     let link = window.location.href;
     if(link.endsWith("#projects")){
         change_page("body", "projects");
-        console.log("projects");
     }else if(link.endsWith("#resume")){
         change_page("body", "resume");
-        console.log("resume");
     }else if(link.endsWith("#recipes")){
         change_page("body", "recipes");
-        console.log("recipe");
-    }else{
-        console.log(link);
     }
 </script>
 
