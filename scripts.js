@@ -60,18 +60,3 @@ function clear_page(which){
     }, 500);
 }
 
-//refreshing or opening on different page than home page / page load
-let link = window.location.href;
-if(link.endsWith("#projects")){
-    change_page("body", "projects");
-    console.log("projects");
-}else if(link.endsWith("#resume")){
-    change_page("body", "resume");
-    console.log("resume");
-}else if(link.endsWith("#recipes")){
-    change_page("body", "recipes");
-    console.log("recipe");
-}else{
-    console.log(link);
-}
-
