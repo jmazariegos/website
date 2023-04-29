@@ -6,6 +6,7 @@
 body, div, a, p, h1, h2, h3, h4 {
     font-family: Roboto;
     text-decoration: none;
+    color: #372e29;
 }
 
 /*JOSH / HEADER*/
@@ -16,6 +17,7 @@ body, div, a, p, h1, h2, h3, h4 {
     justify-content: center;
     text-align: center;
     align-items: center;
+    background-color: #e8e5db;
 }
 
 #josh p {
@@ -32,6 +34,7 @@ body, div, a, p, h1, h2, h3, h4 {
     width: 25%;
     height: 25%;
     margin: 2px auto;
+    background-color: #c4c0b5;
 }
 
 .links, #buttons {
@@ -56,6 +59,10 @@ body, div, a, p, h1, h2, h3, h4 {
 
 #buttons li:hover {
     color: gray;
+}
+
+#image {
+    display: flex;
 }
 
 /*RESUME / PROJECTS / RECIPES*/
